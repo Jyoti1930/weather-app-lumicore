@@ -173,6 +173,8 @@ user.
 - ✅ Clean Architecture with full separation of concerns
 
 ---
+## Demo
+📹 [Watch the screen recording] https://drive.google.com/file/d/1CrYp6XOWeXl7EGm2gTLn8QwIAkec7flg/view?usp=sharing
 
 ## Demo
 📹 [Watch the screen recording](https://drive.google.com/file/d/1CrYp6XOWeXl7EGm2gTLn8QwIAkec7flg/view?usp=sharing)
