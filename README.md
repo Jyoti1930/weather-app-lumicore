@@ -134,6 +134,9 @@ lib/
   - **Invalid city name (400)** or **rate limit (429)** → does **not** fall
     back to cache (since the user explicitly searched for something
     different), and instead shows a direct, meaningful error message.
+- **On app startup**, if there's no internet connection, the app checks the
+  cache immediately and shows the last saved weather right away (with the
+  offline banner) — the user doesn't have to search first to see it.
 
 ### State management (Cubit)
 
@@ -154,11 +157,13 @@ user.
 ### Testing
 
 - `test/data/repositories/weather_repository_impl_test.dart` — unit tests
-  for the repository's online/offline/cache-fallback/error-mapping logic
-  using `mocktail`.
+  for the repository's online/offline/cache-fallback/error-mapping logic,
+  including the startup cache check (`loadCachedWeatherOnStartup`), using
+  `mocktail`.
 - `test/presentation/cubit/weather_cubit_test.dart` — `bloc_test` coverage
-  for search success, search failure, duplicate-request prevention, and
-  empty-input handling.
+  for search success, search failure, duplicate-request prevention,
+  empty-input handling, and showing cached weather automatically on app
+  startup when offline.
 
 ### Bonus features included
 
@@ -168,6 +173,10 @@ user.
 - ✅ Clean Architecture with full separation of concerns
 
 ---
+
+## Demo
+📹 [Watch the screen recording](https://drive.google.com/file/d/1CrYp6XOWeXl7EGm2gTLn8QwIAkec7flg/view?usp=sharing)
+
 
 ## Notes
 
